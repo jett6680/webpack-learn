@@ -1,2 +1,6 @@
-import { myNane } from './utils'
-console.log('detail page', myNane)
+import _ from 'lodash'
+
+console.log('detail page')
+
+export default _.add(1, 2)
+
