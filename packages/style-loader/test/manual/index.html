@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>style-loader manual test</title>
+  </head>
+  <body>
+    <h1>style-loader manual tests</h1>
+
+    <section>
+      <h2>The "injectType" is "styleTag"</h2>
+
+      <article>
+        <h3>Pure css</h3>
+        <div class="red">Red</div>
+        <div class="green">Green</div>
+        <div class="blue">Blue</div>
+        <div class="background"></div>
+      </article>
+
+      <article>
+        <h3>Sass/SCSS</h3>
+        <div class="sass-red">Red</div>
+        <div class="sass-green">Green</div>
+        <div class="sass-blue">Blue</div>
+        <div class="sass-background"></div>
+      </article>
+    </section>
+
+    <section>
+      <h2>The "injectType" is "lazyStyleTag"</h2>
+
+      <article>
+        <h3>Pure css</h3>
+        <div class="lazy-red">Red</div>
+        <div class="lazy-green">Green</div>
+        <div class="lazy-blue">Blue</div>
+        <div class="lazy-background"></div>
+      </article>
+
+      <article>
+        <h3>Sass/SCSS</h3>
+        <div class="sass-lazy-red">Red</div>
+        <div class="sass-lazy-green">Green</div>
+        <div class="sass-lazy-blue">Blue</div>
+        <div class="sass-lazy-background"></div>
+      </article>
+    </section>
+
+    <section>
+      <h2>The "injectType" is "linkTag"</h2>
+
+      <article>
+        <h3>Pure css</h3>
+        <div class="link-red">Red</div>
+        <div class="link-green">Green</div>
+        <div class="link-blue">Blue</div>
+        <div class="link-background"></div>
+      </article>
+    </section>
+
+    <section>
+      <h3>Use/Unuse</h3>
+      <div class="use">No color after timeout 6000ms</div>
+    </section>
+
+    <section>
+      <h2>Order</h2>
+      <div class="order">BACKGROUND SHOULD BE RED</div>
+    </section>
+
+    <section>
+      <h2>Duplicate</h2>
+      <div class="duplicate">SHOULD BE BLUE</div>
+    </section>
+
+    <section>
+      <h2>Modules</h2>
+      <div class="selector1">BACKGROUND SHOULD BE RED</div>
+      <div class="selector2">BACKGROUND SHOULD BE NAVY</div>
+
+      <div class="toolbar">
+        <div class="common">BACKGROUND SHOULD BE ORANGE</div>
+      </div>
+
+      <div class="page-btn">BACKGROUND SHOULD BE CRIMSON</div>
+    </section>
+
+    <section id="toggle-section">
+      <h2>Toggle</h2>
+    </section>
+
+    <section>
+      <h2>Media and Supports</h2>
+      <div class="bottom">BLUE</div>
+      <div class="middle">GREEN</div>
+      <div class="top">RED</div>
+      <div class="media-and-supports">RED</div>
+    </section>
+
+    <section>
+      <h2>Custom element</h2>
+      <custom-square w="100" h="100"></custom-square>
+    </section>
+
+    <script async defer src="/dist/main.js"></script>
+  </body>
+</html>

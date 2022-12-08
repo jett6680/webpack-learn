@@ -13,7 +13,21 @@ module.exports = {
     }
   },
   module: {
-    noParse: /lodash/
+    noParse: /lodash/,
+    rules: [
+      {
+        test: /\.js$/,
+        use: [
+          {
+            loader: path.resolve(__dirname, './my-test-loader'),
+            options: {
+              aaa: 111,
+              bbb: 222
+            }
+          }
+        ]
+      }
+    ]
   },
   output: {
     filename: '[name]-[hash]-[chunkhash].js',
