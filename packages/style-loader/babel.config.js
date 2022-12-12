@@ -5,6 +5,7 @@ module.exports = (api) => {
   api.cache(true);
 
   return {
+    inputSourceMap: true,
     presets: [
       [
         "@babel/preset-env",

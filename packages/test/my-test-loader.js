@@ -3,6 +3,13 @@
 // 因为箭头函数没有this
 
 module.exports = function (source, sourceMap, data) {
-  this.emitError(new Error('emit error test'))
-  return source
+  const slice  = source.split('\n').filter(str => !!str)
+  let template = `[`
+  for(let i = 0; i< slice.length; i++) {
+    template += slice[i] + ','
+  }
+  template += ']'
+  return `
+    module.exports = ${template}
+  `
 }

@@ -22,7 +22,8 @@ import {
 
 import schema from "./options.json";
 
-const loaderAPI = () => {};
+const loaderAPI = () => {
+};
 
 loaderAPI.pitch = function loader(request) {
   const options = this.getOptions(schema);
@@ -43,15 +44,15 @@ loaderAPI.pitch = function loader(request) {
     typeof options.insert === "function"
       ? "function"
       : options.insert && path.isAbsolute(options.insert)
-      ? "module-path"
-      : "selector";
+        ? "module-path"
+        : "selector";
 
   const styleTagTransformType =
     typeof options.styleTagTransform === "function"
       ? "function"
       : options.styleTagTransform && path.isAbsolute(options.styleTagTransform)
-      ? "module-path"
-      : "default";
+        ? "module-path"
+        : "default";
 
   switch (injectType) {
     case "linkTag": {

@@ -1,13 +1,14 @@
-import _ from 'lodash'
-import detail from './detail'
-import Utils from "./utils"
 
-function add(a, b) {
-  return a + b
+import './index.less'
+import jett from './index.jett'
+
+function render() {
+  const dom = document.createElement('div')
+  dom.innerText = 'Hello word'
+  dom.classList.add('title')
+
+  document.body.appendChild(dom)
+  console.log(jett)
 }
 
-
-console.log(add(1, 2))
-console.log(_.add('loda', 'sh'))
-console.log('detail----', detail)
-console.log('utils-----', Utils)
+render()

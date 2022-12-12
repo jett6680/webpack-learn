@@ -16,14 +16,24 @@ module.exports = {
     noParse: /lodash/,
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jett/,
         use: [
           {
-            loader: path.resolve(__dirname, './my-test-loader'),
-            options: {
-              aaa: 111,
-              bbb: 222
-            }
+            loader: path.resolve(__dirname, './my-test-loader.js')
+          }
+        ]
+      },
+      {
+        test: /\.less$/,
+        use: [
+          {
+            loader: path.resolve(__dirname, '../style-loader/dist/cjs.js')
+          },
+          {
+            loader: path.resolve(__dirname, '../css-loader/dist/cjs.js')
+          },
+          {
+            loader: path.resolve(__dirname, '../less-loader/dist/cjs.js')
           }
         ]
       }
@@ -40,7 +50,7 @@ module.exports = {
     })
   ],
   optimization: {
-    minimize: true,
+    minimize: false,
     runtimeChunk: {
       name: "runtime"
     }
