@@ -1,4 +1,5 @@
 const path = require('path')
+const DonePlugin = require('./plugins/done-plugin')
 
 module.exports = {
   mode: "development",
@@ -14,6 +15,7 @@ module.exports = {
   resolveLoader: {
     modules: ['loaders', 'node_modules']
   },
+  plugins: [new DonePlugin()],
   module: {
     rules: [
       {

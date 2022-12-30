@@ -6,6 +6,7 @@ importers:
     specifiers:
       html-webpack-plugin: ^5.5.0
       lodash: ^4.17.21
+      tapable: ^2.2.1
       webpack: ^5.75.0
       webpack-bundle-analyzer: ^4.7.0
       webpack-cli: ^5.0.1
@@ -13,6 +14,7 @@ importers:
     dependencies:
       html-webpack-plugin: 5.5.0_webpack@5.75.0
       lodash: 4.17.21
+      tapable: 2.2.1
     devDependencies:
       webpack: 5.75.0_webpack-cli@5.0.1
       webpack-bundle-analyzer: 4.7.0
@@ -12718,7 +12720,7 @@ packages:
       schema-utils: 3.1.1
       serialize-javascript: 6.0.0
       terser: 5.16.1
-      webpack: 5.75.0
+      webpack: 5.75.0_webpack-cli@5.0.1
 
   /terser/5.16.1:
     resolution: {integrity: sha512-xvQfyfA1ayT0qdK47zskQgRZeWLoOQ8JQ6mIgRGVNwZKdQMU+5FkCBjmv4QjcrTzyZquRw2FVtlJSRUmMKQslw==}
