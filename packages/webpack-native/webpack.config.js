@@ -17,11 +17,11 @@ module.exports = {
     new WebpackDonePlugin()
   ],
   module: {
-    rules: [
-      {
-        test: /\.js$/,
-        use: [ loader1, loader2 ]
-      }
-    ]
+    // rules: [
+    //   {
+    //     test: /\.js$/,
+    //     use: [ loader1, loader2 ]
+    //   }
+    // ]
   }
 }

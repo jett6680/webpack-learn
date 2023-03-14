@@ -1,4 +1,5 @@
-const webpack = require('./core/webpack');
+// const webpack = require('./core/webpack');
+const webpack = require('webpack');
 const webpackOptions = require("./webpack.config.js");
 const compiler = webpack(webpackOptions);
 const fs = require('fs')

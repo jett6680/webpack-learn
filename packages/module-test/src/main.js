@@ -1,5 +1,5 @@
 const button = document.createElement('button')
-button.innerText = '点击'
+button.innerText = '点击122'
 
 button.onclick = () => {
   import('./click').then(module => {
